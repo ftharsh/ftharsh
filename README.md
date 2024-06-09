@@ -36,3 +36,8 @@
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=ftharsh&show_icons=true&locale=en" alt="ftharsh" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=ftharsh&" alt="ftharsh" /></p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="github-snake.svg" />
+  <img alt="github-snake" src="github-snake.svg" />
+</picture>
