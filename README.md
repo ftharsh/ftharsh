@@ -87,7 +87,7 @@
 > Mission telemetry and trajectory analysis.
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ftharsh&show_icons=true&hide_border=true&bg_color=04080e&title_color=4aadcc&text_color=2a7a95&icon_color=1a9955&ring_color=4aadcc" alt="GitHub Stats" height="170"/>
+  <img src="https://github-readme-stats-chi-tawny-81.vercel.app/api?username=ftharsh&show_icons=true&hide_border=true&bg_color=04080e&title_color=4aadcc&text_color=2a7a95&icon_color=1a9955&ring_color=4aadcc" alt="GitHub Stats" height="170"/>
   &nbsp;&nbsp;
   <img src="https://github-readme-streak-stats.herokuapp.com?user=ftharsh&hide_border=true&background=04080E&ring=4AADCC&fire=CC8820&currStreakLabel=4AADCC&sideLabels=2A7A95&currStreakNum=4AADCC&sideNums=2A7A95&dates=153550" alt="GitHub Streak" height="170"/>
 </p>
