@@ -1,0 +1,210 @@
+<svg width="100%" viewBox="0 0 840 380" xmlns="http://www.w3.org/2000/svg">
+<style>
+  @keyframes diskSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+  @keyframes endSpin{from{transform:rotate(0deg)}to{transform:rotate(-360deg)}}
+  @keyframes fi{from{opacity:0}to{opacity:1}}
+  @keyframes blink{0%,45%{opacity:1}50%,95%{opacity:.12}100%{opacity:1}}
+  @keyframes scanV{0%{transform:translateY(-5px);opacity:.5}100%{transform:translateY(390px);opacity:0}}
+  @keyframes barFill{from{width:0}to{width:130px}}
+  @keyframes statusFill{from{width:0}to{width:160px}}
+  @keyframes pulse{0%,100%{opacity:.3}50%{opacity:.85}}
+  @keyframes lensRing{0%,100%{opacity:.18}50%{opacity:.42}}
+  @keyframes haze{0%,100%{opacity:.12}50%{opacity:.25}}
+  @keyframes twinkle{0%,100%{opacity:.15}50%{opacity:.6}}
+  @keyframes drift{0%{transform:translate(0,0)}50%{transform:translate(2px,-1px)}100%{transform:translate(0,0)}}
+  @keyframes trailDash{from{stroke-dashoffset:200}to{stroke-dashoffset:0}}
+  text{font-family:'Courier New',Consolas,monospace}
+  .f1{opacity:0;animation:fi .5s .5s forwards}
+  .f2{opacity:0;animation:fi .5s .8s forwards}
+  .f3{opacity:0;animation:fi .5s 1.1s forwards}
+  .f4{opacity:0;animation:fi .5s 1.4s forwards}
+  .f5{opacity:0;animation:fi .5s 1.7s forwards}
+  .f6{opacity:0;animation:fi .5s 2s forwards}
+  .f7{opacity:0;animation:fi .5s 2.3s forwards}
+  .f8{opacity:0;animation:fi .5s 2.6s forwards}
+  .f9{opacity:0;animation:fi .5s 2.9s forwards}
+  .f10{opacity:0;animation:fi .5s 3.2s forwards}
+  .bk{animation:blink 2s step-end infinite}
+  .bk2{animation:blink 2s 1s step-end infinite}
+</style>
+
+<rect width="840" height="380" fill="#04080e"/>
+
+<!-- Scan line -->
+<line x1="0" y1="0" x2="840" y2="0" stroke="#18799a" stroke-width="1.2" opacity="0" style="animation:scanV 2.5s 0s linear forwards"/>
+
+<!-- Grid -->
+<line x1="168" y1="0" x2="168" y2="380" stroke="#081218" stroke-width=".3"/>
+<line x1="336" y1="0" x2="336" y2="380" stroke="#081218" stroke-width=".3"/>
+<line x1="504" y1="0" x2="504" y2="380" stroke="#081218" stroke-width=".3"/>
+<line x1="672" y1="0" x2="672" y2="380" stroke="#081218" stroke-width=".3"/>
+<line x1="0" y1="76" x2="840" y2="76" stroke="#081218" stroke-width=".3"/>
+<line x1="0" y1="152" x2="840" y2="152" stroke="#081218" stroke-width=".3"/>
+<line x1="0" y1="228" x2="840" y2="228" stroke="#081218" stroke-width=".3"/>
+<line x1="0" y1="304" x2="840" y2="304" stroke="#081218" stroke-width=".3"/>
+
+<!-- HUD corners -->
+<polyline points="12,6 5,6 5,22" stroke="#153045" stroke-width="1.2" fill="none"/>
+<polyline points="828,6 835,6 835,22" stroke="#153045" stroke-width="1.2" fill="none"/>
+<polyline points="12,374 5,374 5,358" stroke="#153045" stroke-width="1.2" fill="none"/>
+<polyline points="828,374 835,374 835,358" stroke="#153045" stroke-width="1.2" fill="none"/>
+
+<!-- Header line -->
+<line x1="14" y1="38" x2="826" y2="38" stroke="#0c1a28" stroke-width=".5"/>
+
+<!-- Header text -->
+<text x="18" y="26" font-size="11" fill="#1e5570" letter-spacing="3" class="f1">ENDURANCE MISSION CTRL</text>
+<circle cx="248" cy="22" r="3" fill="#bb2525" class="bk f1"/>
+<text x="256" y="26" font-size="11" fill="#bb2525" class="bk f1">REC</text>
+<text x="822" y="26" font-size="11" fill="#153045" text-anchor="end" letter-spacing="1" class="f1">v4.2.1</text>
+
+<!-- === LEFT PANEL: Commander Info === -->
+<text x="20" y="58" font-size="11" fill="#153550" letter-spacing="3" class="f2">COMMANDER</text>
+<text x="20" y="82" font-size="24" fill="#4aadcc" letter-spacing="5" class="f2">HARSH</text>
+
+<text x="20" y="108" font-size="13" fill="#2a7a95" letter-spacing="1" class="f3">Full-Stack Engineer</text>
+
+<line x1="20" y1="118" x2="185" y2="118" stroke="#0c1a28" stroke-width=".4" class="f3"/>
+
+<text x="20" y="138" font-size="11" fill="#153550" letter-spacing="2" class="f4">STATION</text>
+<text x="20" y="155" font-size="12" fill="#2a7a95" class="f4">Nextuple Pvt Ltd</text>
+
+<text x="20" y="177" font-size="11" fill="#153550" letter-spacing="2" class="f5">LAUNCHED</text>
+<text x="20" y="194" font-size="12" fill="#2a7a95" class="f5">September 2024</text>
+
+<text x="20" y="216" font-size="11" fill="#153550" letter-spacing="2" class="f5">SECTOR</text>
+<text x="20" y="233" font-size="12" fill="#2a7a95" class="f6">India</text>
+
+<text x="20" y="260" font-size="11" fill="#153550" letter-spacing="2" class="f6">TIME ON MISSION</text>
+<text x="20" y="280" font-size="18" fill="#4aadcc" letter-spacing="2" class="f7">002Y : 00M</text>
+
+<!-- === CENTER: Stars + Gargantua + Endurance === -->
+
+<!-- Stars -->
+<circle cx="260" cy="68" r=".6" fill="#3a7a95" class="f3" style="animation:twinkle 3s 1.5s infinite"/>
+<circle cx="520" cy="55" r=".5" fill="#3a7a95" class="f3" style="animation:twinkle 4s 2s infinite"/>
+<circle cx="350" cy="50" r=".4" fill="#2a6a85" class="f3" style="animation:twinkle 3.5s 1.8s infinite"/>
+<circle cx="480" cy="95" r=".5" fill="#2a6a85" class="f3" style="animation:twinkle 5s 2.2s infinite"/>
+<circle cx="300" cy="115" r=".3" fill="#3a7a95" class="f3" style="animation:twinkle 4s 3s infinite"/>
+<circle cx="550" cy="130" r=".4" fill="#2a6a85" class="f3" style="animation:twinkle 3s 2.5s infinite"/>
+<circle cx="425" cy="275" r=".5" fill="#3a7a95" class="f3" style="animation:twinkle 4.5s 1.7s infinite"/>
+<circle cx="340" cy="260" r=".4" fill="#2a6a85" class="f3" style="animation:twinkle 3.5s 2.8s infinite"/>
+<circle cx="510" cy="245" r=".3" fill="#3a7a95" class="f3" style="animation:twinkle 5s 3.2s infinite"/>
+<circle cx="285" cy="210" r=".4" fill="#2a6a85" class="f3" style="animation:twinkle 4s 2.1s infinite"/>
+<circle cx="565" cy="200" r=".5" fill="#3a7a95" class="f3" style="animation:twinkle 3s 3.5s infinite"/>
+<circle cx="450" cy="65" r=".4" fill="#2a6a85" class="f3" style="animation:twinkle 4.5s 1.3s infinite"/>
+
+<!-- Gargantua: Black Hole -->
+<g class="f3">
+  <!-- Background haze -->
+  <circle cx="420" cy="180" r="100" fill="#0a0500" opacity=".12" style="animation:haze 6s 2s infinite"/>
+
+  <!-- Outer accretion disk (rotating) -->
+  <g style="transform-origin:420px 180px;animation:diskSpin 28s linear infinite">
+    <ellipse cx="420" cy="180" rx="95" ry="16" fill="none" stroke="#2a1505" stroke-width="16" opacity=".25"/>
+    <ellipse cx="420" cy="180" rx="78" ry="13" fill="none" stroke="#553015" stroke-width="10" opacity=".3"/>
+    <ellipse cx="420" cy="180" rx="62" ry="10" fill="none" stroke="#7a4520" stroke-width="6" opacity=".4"/>
+    <ellipse cx="420" cy="180" rx="48" ry="7" fill="none" stroke="#996830" stroke-width="3.5" opacity=".5"/>
+    <ellipse cx="420" cy="180" rx="38" ry="5" fill="none" stroke="#bb8540" stroke-width="2" opacity=".6"/>
+  </g>
+
+  <!-- Vertical gravitational lensing ring (back of disk bent over top) -->
+  <ellipse cx="420" cy="180" rx="22" ry="90" fill="none" stroke="#553518" stroke-width="2" opacity=".18" style="animation:lensRing 5s 2s infinite"/>
+  <ellipse cx="420" cy="180" rx="18" ry="82" fill="none" stroke="#6a4520" stroke-width="1" opacity=".14"/>
+  <ellipse cx="420" cy="180" rx="25" ry="95" fill="none" stroke="#3a2008" stroke-width=".8" opacity=".1"/>
+
+  <!-- Event horizon (the void) -->
+  <circle cx="420" cy="180" r="24" fill="#04080e"/>
+
+  <!-- Photon ring -->
+  <circle cx="420" cy="180" r="27" fill="none" stroke="#cc9940" stroke-width=".7" opacity=".5" style="animation:pulse 3.5s 2s infinite"/>
+
+  <!-- Accretion particles -->
+  <circle cx="448" cy="158" r="1.5" fill="#aa7525" opacity=".4" style="animation:pulse 2.5s 2s infinite"/>
+  <circle cx="392" cy="198" r="1" fill="#aa7525" opacity=".3" style="animation:pulse 3s 2.8s infinite"/>
+  <circle cx="435" cy="195" r=".8" fill="#886020" opacity=".35" style="animation:pulse 4s 3s infinite"/>
+</g>
+
+<!-- Trajectory path: Endurance to Gargantua -->
+<path d="M310,130 Q350,145 385,165" fill="none" stroke="#1a4a60" stroke-width=".6" stroke-dasharray="4,3" opacity="0" style="animation:fi .5s 1.8s forwards"/>
+
+<!-- Endurance Spacecraft -->
+<g class="f4" style="animation:drift 8s 2s ease-in-out infinite">
+  <g style="transform-origin:285px 122px;animation:endSpin 18s linear infinite">
+    <!-- Main ring -->
+    <circle cx="285" cy="122" r="12" fill="none" stroke="#3a8aa5" stroke-width=".8" opacity=".7"/>
+    <!-- Hub -->
+    <circle cx="285" cy="122" r="2.5" fill="#3a8aa5" opacity=".5"/>
+    <!-- Modules at cardinal points -->
+    <rect x="282" y="107" width="6" height="4" rx=".8" fill="#2a7590" opacity=".6"/>
+    <rect x="282" y="133" width="6" height="4" rx=".8" fill="#2a7590" opacity=".6"/>
+    <rect x="270" y="119" width="4" height="6" rx=".8" fill="#2a7590" opacity=".6"/>
+    <rect x="296" y="119" width="4" height="6" rx=".8" fill="#2a7590" opacity=".6"/>
+    <!-- Diagonal modules -->
+    <rect x="274" y="110" width="4" height="3.5" rx=".5" fill="#2a7590" opacity=".45" transform="rotate(-45,276,111.75)"/>
+    <rect x="292" y="110" width="4" height="3.5" rx=".5" fill="#2a7590" opacity=".45" transform="rotate(45,294,111.75)"/>
+    <rect x="274" y="130" width="4" height="3.5" rx=".5" fill="#2a7590" opacity=".45" transform="rotate(45,276,131.75)"/>
+    <rect x="292" y="130" width="4" height="3.5" rx=".5" fill="#2a7590" opacity=".45" transform="rotate(-45,294,131.75)"/>
+  </g>
+</g>
+
+<!-- Endurance label -->
+<text x="285" y="148" font-size="11" fill="#153550" text-anchor="middle" letter-spacing="2" class="f5">ENDURANCE</text>
+
+<!-- Gargantua label -->
+<text x="420" y="288" font-size="11" fill="#1e1208" text-anchor="middle" letter-spacing="3" class="f7">GARGANTUA</text>
+
+<!-- === RIGHT PANEL: Systems === -->
+<text x="608" y="58" font-size="11" fill="#153550" letter-spacing="3" class="f4">SYSTEMS</text>
+<line x1="608" y1="64" x2="820" y2="64" stroke="#0c1a28" stroke-width=".4" class="f4"/>
+
+<circle cx="616" cy="82" r="3" fill="#1a9955" class="f5"/>
+<text x="628" y="86" font-size="12" fill="#2a7a95" class="f5">Java / Spring Boot</text>
+
+<circle cx="616" cy="102" r="3" fill="#1a9955" class="f5"/>
+<text x="628" y="106" font-size="12" fill="#2a7a95" class="f5">React / Redux</text>
+
+<circle cx="616" cy="122" r="3" fill="#1a9955" class="f6"/>
+<text x="628" y="126" font-size="12" fill="#2a7a95" class="f6">Kafka</text>
+
+<circle cx="616" cy="142" r="3" fill="#1a9955" class="f6"/>
+<text x="628" y="146" font-size="12" fill="#2a7a95" class="f6">PostgreSQL / Redis</text>
+
+<circle cx="616" cy="162" r="3" fill="#1a9955" class="f7"/>
+<text x="628" y="166" font-size="12" fill="#2a7a95" class="f7">Docker / CI-CD</text>
+
+<circle cx="616" cy="182" r="3" fill="#1a9955" class="f7"/>
+<text x="628" y="186" font-size="12" fill="#2a7a95" class="f7">Tailwind CSS</text>
+
+<circle cx="616" cy="206" r="3" fill="#cc8820" class="bk2 f8"/>
+<text x="628" y="210" font-size="12" fill="#cc8820" class="f8">AI / ML</text>
+<text x="718" y="210" font-size="11" fill="#665520" class="f8">LEARNING</text>
+
+<circle cx="616" cy="226" r="3" fill="#cc8820" class="bk2 f8"/>
+<text x="628" y="230" font-size="12" fill="#cc8820" class="f8">Cloud</text>
+<text x="718" y="230" font-size="11" fill="#665520" class="f8">LEARNING</text>
+
+<!-- Right panel: Progress -->
+<text x="608" y="262" font-size="11" fill="#153550" letter-spacing="2" class="f7">PROGRESS</text>
+<rect x="608" y="270" width="140" height="8" rx="1" fill="#081218" class="f8"/>
+<rect x="608" y="270" width="0" height="8" rx="1" fill="#1a5a70" style="animation:barFill 1.8s 2.8s ease-out forwards"/>
+
+<!-- Right panel: Transmissions -->
+<text x="608" y="302" font-size="11" fill="#153550" letter-spacing="2" class="f9">TRANSMISSIONS</text>
+<text x="608" y="318" font-size="11" fill="#1a6a80" class="f9">LinkedIn</text>
+<text x="672" y="318" font-size="11" fill="#1a6a80" class="f9">Twitter</text>
+<text x="730" y="318" font-size="11" fill="#1a6a80" class="f9">Portfolio</text>
+
+<!-- === BOTTOM BAR === -->
+<line x1="14" y1="338" x2="826" y2="338" stroke="#0c1a28" stroke-width=".5"/>
+
+<text x="20" y="356" font-size="11" fill="#153550" letter-spacing="2" class="f9">STATUS</text>
+<rect x="80" y="346" width="170" height="10" rx="2" fill="#081218" class="f10"/>
+<rect x="80" y="346" width="0" height="10" rx="2" fill="#145535" style="animation:statusFill 2s 3.2s ease-out forwards"/>
+<text x="260" y="356" font-size="12" fill="#1a9955" letter-spacing="3" class="f10">OPERATIONAL</text>
+
+<text x="822" y="356" font-size="11" fill="#0c1a28" text-anchor="end" class="f10">DSN-2024-HARSH</text>
+
+<text x="420" y="375" font-size="11" fill="#0c1820" text-anchor="middle" letter-spacing="1" class="f10">// EXPLORING BEYOND THE KNOWN HORIZON</text>
+
+</svg>
